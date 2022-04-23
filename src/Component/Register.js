@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { useState } from "react";
-import { Form } from "react-bootstrap";
+import { Form,Row,Col } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 
 //import * as DataContainer from "./FetchData";
@@ -36,54 +36,67 @@ export class Register extends Component {
                 <div className="col-sm-4">
                     <Form >
                         <Form.Group size="lg" controlId="email">
-                            <Form.Label>Register for your stellar account</Form.Label>                            
-                        </Form.Group>                    
-                        <Form.Group size="lg" controlId="email">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control
+                            <Form.Label>Register for your account</Form.Label>                            
+                        </Form.Group>  
+                        <div style={{flexDirection:'row' , margin:'10px' , textAlign:'left'}}>              
+                        <Form.Group size="lg" controlId="email" style={{flexDirection:'row' }} >
+                            <Row>
+                            <Col><Form.Label>Email</Form.Label></Col>
+                            <Col><Form.Control
                                 autoFocus
                                 type="email"
                                 onChange={(e) => this.email = e.target.value}
-                            />
+                            /></Col>
+                            </Row>
                         </Form.Group>
-                        <Form.Group size="lg" controlId="Firstname">
-                            <Form.Label>First name</Form.Label>
-                            <Form.Control
+                        <Form.Group size="lg" controlId="Firstname" style={{flexDirection:'row' , margin:'10px'}} >
+                            <Row>
+                            <Col><Form.Label>First name</Form.Label></Col>
+                            <Col><Form.Control
                                 type="text"
                                 onChange={(e) => this.password = e.target.value}
-                            />
+                            /></Col>
+                            </Row>
                         </Form.Group>
-                        <Form.Group size="lg" controlId="Lastname">
-                            <Form.Label>Last name</Form.Label>
-                            <Form.Control
+                        <Form.Group size="lg" controlId="Lastname" style={{flexDirection:'row' , margin:'10px'}} >
+                            <Row>
+                            <Col><Form.Label>Last name</Form.Label></Col>
+                            <Col><Form.Control
                                 autoFocus
                                 type="text"
                                 onChange={(e) => this.email = e.target.value}
-                            />
+                            /></Col>
+                            </Row>
                         </Form.Group>
-                        <Form.Group size="lg" controlId="password">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control
+                        <Form.Group size="lg" controlId="password" style={{flexDirection:'row' , margin:'10px'}} >
+                            <Row>
+                            <Col><Form.Label>Password</Form.Label></Col>
+                            <Col><Form.Control
                                 autoFocus
                                 type="password"
                                 onChange={(e) => this.email = e.target.value}
-                            />
+                            /></Col>
+                            </Row>
                         </Form.Group>
-                        <Form.Group size="lg" controlId="repassword">
-                            <Form.Label>Retype Password</Form.Label>
-                            <Form.Control
+                        <Form.Group size="lg" controlId="repassword" style={{flexDirection:'row' , margin:'10px'}} >
+                            <Row>
+                            <Col><Form.Label>Retype Password</Form.Label></Col>
+                            <Col><Form.Control
                                 autoFocus
                                 type="password"
                                 onChange={(e) => this.email = e.target.value}
-                            />
+                            /></Col>
+                            </Row>
                         </Form.Group>
-                        <Form.Group size="lg" controlId="country">
-                            <Form.Label>Country</Form.Label>
-                            <Form.Control
+                        <Form.Group size="lg" controlId="country" style={{flexDirection:'row' , margin:'10px'}} >
+                            <Row>
+                            <Col><Form.Label>Country</Form.Label></Col>
+                            <Col><Form.Control
                                 autoFocus
                                 type="text"
                                 onChange={(e) => this.email = e.target.value}
-                            />
+                            /></Col>
+                            </Row>
                         </Form.Group>
                         <Form.Group size="lg" controlId="accept">
                             <Form.Check type="checkbox" label="I have read and accept the terms and conditions" />
@@ -92,10 +105,10 @@ export class Register extends Component {
                         <Button block size="lg" type="submit">
                             Register
                     </Button>
+                    </div>
                     </Form>
-                </div>
-                <div class="home-banner-image-div">
-                </div>
+                
+                </div>    
             </div>
 
         );
